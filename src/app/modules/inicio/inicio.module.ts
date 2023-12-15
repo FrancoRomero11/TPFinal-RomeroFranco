@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { InicioRoutingModule } from './inicio-routing.module';
 import { InicioComponent } from './pages/inicio/inicio.component';
-import { SharedModule } from 'src/app/shared/shared.module';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     InicioRoutingModule,
-    SharedModule
+    MatCardModule,
+    MatButtonModule
+  ],
+  exports: [
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class InicioModule { }

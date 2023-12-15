@@ -8,20 +8,20 @@ const routes: Routes = [
     path: "", component: InicioComponent
   },
   {
-    path: "auth",
+    path: "",
     loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: "inicio",
+    path: "",
     loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)
   },
   {
-    path: "catalogo",
+    path: "",
     loadChildren: () => import('./modules/catalogo/catalogo.module').then(m => m.CatalogoModule)
   },
   {
-    path: "administracion",
-    loadChildren: () => import('./modules/administracion/administracion.module').then(m => m.AdministracionModule)
+    path: "",
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
   },
 ];
 
