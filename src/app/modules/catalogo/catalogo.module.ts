@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CatalogoRoutingModule } from './catalogo-routing.module';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+
 
 
 @NgModule({
@@ -13,7 +13,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     CatalogoRoutingModule,
-    SharedModule
   ]
 })
 export class CatalogoModule { }

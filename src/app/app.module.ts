@@ -15,11 +15,9 @@ import { AngularFireModule } from '@angular/fire/compat'; // CLOUD FIRESTORE
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; // AUTENTIFICACIÓN
 import { AngularFireStorageModule } from '@angular/fire/compat/storage'; //IMAGENES
 
-
 @NgModule({
   declarations: [
     AppComponent,
-   
   ],
   imports: [
     BrowserModule,
