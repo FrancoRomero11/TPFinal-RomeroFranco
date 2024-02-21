@@ -25,7 +25,6 @@ export class TableComponent {
     alt: new FormControl('',Validators.required),
     descripcion: new FormControl('',Validators.required),
     precio: new FormControl(0,Validators.required),
-    categoria: new FormControl('',Validators.required)
   })
 
   constructor(
@@ -47,7 +46,6 @@ export class TableComponent {
         alt: this.producto.value.alt!,
         descripcion: this.producto.value.descripcion!,
         precio: this.producto.value.precio!,
-        categoria: this.producto.value.categoria!
       };
 
       // llamamos al servicioCrud; función crearProducto; seteamos nuevoProducto
@@ -74,7 +72,6 @@ export class TableComponent {
       alt: productoSeleccionado.alt,
       descripcion: productoSeleccionado.descripcion,
       precio: productoSeleccionado.precio,
-      categoria: productoSeleccionado.categoria
     })
   }
 
@@ -89,7 +86,6 @@ export class TableComponent {
       alt: this.producto.value.alt!,
       descripcion: this.producto.value.descripcion!,
       precio: this.producto.value.precio!,
-      categoria: this.producto.value.categoria!
     }
 
     this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)

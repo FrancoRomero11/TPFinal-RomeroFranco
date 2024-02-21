@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let col of coleccionProductos" class="contenido">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <!-- TÍTULO -->
+            <mat-card-title>{{col.nombre}}</mat-card-title>
+          </mat-card-header>
+          <!-- IMAGEN -->
+          <img mat-card-image src="{{col.imagen}}" alt="{{col.alt}}" width="100%">
+          <mat-card-content>
+            <!-- DESCRIPCIÓN -->
+            <p>
+              {{col.descripcion}}
+            </p>
+            <p>
+              {{col.precio}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

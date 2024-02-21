@@ -1,29 +1,34 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button routerLink="/inicio" class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>home</mat-icon>
-    </button>
-    <span>Chess</span>
-  
-    <!-- ENRUTAMOS PÁGINAS -->
-    <button mat-button routerLink="/inicio">Inicio</button>
- 
-    <!-- MENU despegable para Catalogo -->
-    <button mat-button [matMenuTriggerFor]="menu">Catalogo</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/catalogo">Todos</button>
-      <button mat-menu-item routerLink="/collares">Collares</button>
-      <button mat-menu-item routerLink="/juguetes">Juguetes</button>
-      <button mat-menu-item routerLink="/indumentaria">Indumentaria</button>
-    </mat-menu>
-    <button mat-button routerLink="/admin">Administrador</button>
-  
-    <span class="example-spacer"></span>
-  
-    <!-- Menu despegable para usuarios (registro y login)-->
-    <!-- Va a contener los formularios de acceso -->
-    <button mat-button [matMenuTriggerFor]="user"><mat-icon>person</mat-icon></button>
-    <mat-menu #user="matMenu">
-      <button mat-menu-item routerLink="/login">Iniciar Sesión <mat-icon>person</mat-icon></button>
-      <button mat-menu-item routerLink="/register">Registrarse <mat-icon>person_add</mat-icon></button>
-    </mat-menu>
-  </mat-toolbar>
+<mat-toolbar color="primary"> <!-- Define una barra de herramientas con color primario -->
+
+  <!-- Botón de icono para navegar a la página de inicio -->
+  <button mat-icon-button routerLink="/inicio" class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>home</mat-icon> <!-- Icono de casa -->
+  </button>
+
+  <!-- Título de la aplicación -->
+  <span>Chess</span>
+
+  <!-- Botón para navegar a la página de inicio -->
+  <button mat-button routerLink="/inicio">Inicio</button>
+
+  <!-- Botón para navegar a la página de catálogo -->
+  <button mat-button routerLink="/catalogo">Catálogo</button>
+
+  <!-- Botón para navegar a la página de administrador -->
+  <button mat-button routerLink="/admin">Administrador</button>
+
+  <!-- Espaciador -->
+  <span class="example-spacer"></span>
+
+  <!-- Menú desplegable para usuarios (registro y inicio de sesión) -->
+  <button mat-button [matMenuTriggerFor]="user"> <!-- Define un botón que activa el menú desplegable "user" -->
+      <mat-icon>person</mat-icon> <!-- Icono de usuario -->
+  </button>
+
+  <!-- Menú desplegable de usuario -->
+  <mat-menu #user="matMenu"> <!-- Define un menú desplegable con la referencia "user" -->
+      <!-- Elementos del menú -->
+      <button mat-menu-item routerLink="/login">Iniciar Sesión <mat-icon>person</mat-icon></button> <!-- Botón para iniciar sesión -->
+      <button mat-menu-item routerLink="/register">Registrarse <mat-icon>person_add</mat-icon></button> <!-- Botón para registrarse -->
+  </mat-menu>
+</mat-toolbar>

@@ -5,5 +5,4 @@ export interface Producto {
     alt: string;
     descripcion: string;
     precio: number;
-    categoria: string;
 }
